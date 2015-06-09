@@ -1,0 +1,20 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'Guardfile'
+    - 'Rakefile'
+Documentation:
+  Enabled: false
+SignalException:
+  Enabled: false
+Style/TrailingComma:
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Metrics/LineLength:
+  Enabled: true
+  Exclude:
+    - 'config/**/*'
