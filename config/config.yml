@@ -1,0 +1,9 @@
+development: &default
+  secret_key_base: secret_key_base
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  s3_bucket: 'ispree-rails'
