@@ -1,6 +1,7 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+
 group :red_green_refactor, halt_on_fail: true do
   guard :rspec, cmd: 'bin/rspec' do
     watch(%r{^spec/.+_spec\.rb$})
