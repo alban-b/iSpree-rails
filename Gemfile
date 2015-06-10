@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "2.2.2"
 
 gem "rails", "4.2.1"
 
@@ -33,4 +34,8 @@ group :development do
   gem "guard-rubocop"
   gem "spring"
   gem "quiet_assets"
+end
+
+group :production do
+  gem 'rails_12factor'
 end
