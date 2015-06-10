@@ -3,7 +3,7 @@ ruby "2.2.2"
 
 gem "rails", "4.2.1"
 
-gem 'app_konfig'
+gem "app_konfig"
 gem "pg"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
@@ -13,9 +13,9 @@ gem "turbolinks"
 gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "decent_exposure"
-gem 'spree', github: 'spree/spree', branch: '3-0-stable'
-gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '3-0-stable'
-gem 'aws-sdk', '1.64.0'
+gem "spree", github: "spree/spree", branch: "3-0-stable"
+gem "spree_auth_devise", github: "spree/spree_auth_devise", branch: "3-0-stable"
+gem "aws-sdk", "1.64.0"
 
 group :development, :test do
   gem "byebug"
@@ -39,5 +39,5 @@ group :development do
 end
 
 group :production do
-  gem 'rails_12factor'
+  gem "rails_12factor"
 end
