@@ -25,6 +25,7 @@ Spree.config do |_config|
       s3_headers: { "Cache-Control" => "max-age=31557600" },
       s3_protocol: "https",
       bucket: AppConfig.s3_bucket,
+      url: ":s3_domain_url",
 
       path: ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
       default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
