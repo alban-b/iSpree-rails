@@ -6,4 +6,4 @@ test:
 
 production:
   <<: *default
-  s3_bucket: 'ispree-rails'
+  s3_bucket: s3_bucket
