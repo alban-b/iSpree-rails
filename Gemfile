@@ -16,6 +16,7 @@ gem "decent_exposure"
 gem "spree", github: "spree/spree", branch: "3-0-stable"
 gem "spree_auth_devise", github: "spree/spree_auth_devise", branch: "3-0-stable"
 gem "aws-sdk", "1.64.0"
+gem 'rollbar', '~> 1.5.1'
 
 group :development, :test do
   gem "byebug"
