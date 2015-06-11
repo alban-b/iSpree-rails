@@ -10,6 +10,31 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |_config|
+  # s3 configuration
+  if Rails.env.production?
+    # production store images on s3
+    # development will default to locac storage
+    attachment_config = {
+      s3_credentials: {
+        access_key_id: AppConfig.s3_access_key_id,
+        secret_access_key: AppConfig.s3_secret_access,
+        bucket: AppConfig.s3_bucket,
+      },
+
+      storage: :s3,
+      s3_headers: { "Cache-Control" => "max-age=31557600" },
+      s3_protocol: "https",
+      bucket: AppConfig.s3_bucket,
+
+      path: ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
+      default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
+      default_style: "product",
+    }
+
+    attachment_config.each do |key, value|
+      Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
+    end
+  end
 end
 
 Spree.user_class = "Spree::LegacyUser"
