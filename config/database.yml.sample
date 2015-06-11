@@ -1,4 +1,4 @@
-development:
+development: &default
   adapter:  postgresql
   host:     localhost
   encoding: unicode
@@ -6,7 +6,6 @@ development:
   pool:     5
 
 test:
-  adapter:  postgresql
-  encoding: unicode
+  <<: *default
   database: ispree_test
 
