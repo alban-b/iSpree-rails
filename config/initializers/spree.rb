@@ -16,8 +16,8 @@ Spree.config do |_config|
     # development will default to locac storage
     attachment_config = {
       s3_credentials: {
-        access_key_id: AppConfig.s3_access_key_id,
-        secret_access_key: AppConfig.s3_secret_access,
+        aws_access_key_id: AWS.config.access_key_id,
+        aws_secret_access_key: AWS.config.secret_access_key,
         bucket: AppConfig.s3_bucket,
       },
 
