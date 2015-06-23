@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe Spree::Variant do
   describe ".bestsellers" do
-    def assign_product_to_item(order, product)
+    def assign_product_to_order(order, product)
       create(:line_item, order: order, variant: product)
     end
 
@@ -16,9 +16,9 @@ describe Spree::Variant do
     let(:order3) { create(:order) }
 
     before do
-      assign_product_to_item(order1, product1)
-      assign_product_to_item(order2, product1)
-      assign_product_to_item(order3, product2)
+      assign_product_to_order(order1, product1)
+      assign_product_to_order(order2, product1)
+      assign_product_to_order(order3, product2)
     end
 
     it "includes products that have been ordered" do
