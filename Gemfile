@@ -17,6 +17,7 @@ gem "spree", github: "spree/spree", branch: "3-0-stable"
 gem "spree_auth_devise", github: "spree/spree_auth_devise", branch: "3-0-stable"
 gem "aws-sdk", "1.64.0"
 gem "rollbar", "~> 1.5.1"
+gem "decent_exposure"
 
 group :development, :test do
   gem "byebug"
@@ -28,6 +29,7 @@ end
 group :test do
   gem "factory_girl_rails"
   gem "rspec-rails"
+  gem "database_cleaner"
 end
 
 group :development do
@@ -37,6 +39,7 @@ group :development do
   gem "guard-rubocop"
   gem "spring"
   gem "quiet_assets"
+  gem "bullet"
 end
 
 group :production do
