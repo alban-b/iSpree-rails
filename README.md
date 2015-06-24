@@ -36,7 +36,7 @@ To generate sample data in Spree run the following commands:
 
 ```
 bin/rake db:seed
-bin/rake spree:sample_load
+bin/rake spree_sample:load
 ```
 
 ## Spree API
